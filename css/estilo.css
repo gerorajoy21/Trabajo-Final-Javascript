@@ -1,0 +1,1024 @@
+/* GENERAL */
+*{
+    font-family: 'Lato', sans-serif;
+}
+body{
+    background-color: #efefef;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+}
+a{
+    text-decoration: none;
+}
+label{
+    color: black;
+}
+
+/* HEADER */
+.header .navbar {
+    background-color: transparent !important;
+}
+.header, .header-compras, .header-paquetes{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    -webkit-transition: .2s ease all;
+    transition: .2s ease all;
+}
+.header{
+    background-image: url(../imagenes/portada.jpeg);
+}
+.header-compras{
+    background-image: url(../imagenes/fondo2.jpeg);
+}
+.header-paquetes{
+    background-image: url(../imagenes/fondo3.jpeg);
+}
+.logo{
+    width: 60px;
+}
+.logo-h3{
+    color: white;
+    width: 132px;
+}
+.colorOscuro{
+    background-color: rgb(221, 54, 82);
+}
+
+/* NAVBAR */
+
+.navbar{
+    width: 100%;
+	max-width: 90%;
+	margin: 0 auto;
+}
+nav li{
+    list-style-type: none;
+}
+nav li a{
+    color: white;
+}
+ul li a:hover{
+    color: rgb(202, 202, 202) !important;
+}
+
+/* MENU LATERAL */
+.menuLateral {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: white;
+    width: 75vw;
+    height: 100vh;
+    left: -1350px;
+    transition: all .5s ease-in-out;
+}
+
+.menuLateral.active {
+    left: 0;
+}
+
+.grupoLogoLateral {
+    display: flex;
+    align-items: center;
+}
+
+.cerrar {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+}
+
+.contenedorLateral {
+    position: relative;
+    height: 90vh;
+    width: 75vw;
+}
+
+.icons {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    width: 75vw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.ham {
+    display: none;
+    top: 10px;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.ham span {
+    display: block;
+    background-color: rgb(221, 54, 82);
+    height: 3px;
+    width: 28px;
+    margin: 5px auto;
+    border-radius: 2px;
+}
+.div-redes{
+    width: 65vw;
+    margin-bottom: 40px;
+}
+
+/* ------------------ */
+
+/* Fondo oscuro cuando se abre el menu */
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: ease-in-out .5s;
+}
+
+.overlay.activeOverlay {
+    display: block;
+    background: #191A1C;
+    opacity: .5;
+}
+
+/* -------------- */
+
+/*Form Inicial*/
+
+.div__flex{
+    background-color: rgba(255,255,255,0.4);
+    width: 100%;
+	max-width: 80%;
+	margin: 0 auto;
+    border-radius: 30px;
+}
+.div__clase{
+    display: flex;
+}
+.div__clase label{
+    margin-right: 20px;
+}
+.div__input{
+    display: flex;
+    flex-direction: column;
+}
+.form{
+    width: 100%;
+	max-width: 90%;
+	margin: 0 auto;
+    color: white;
+    padding: 20px 0;
+    padding-right: 26px;
+}
+.input{
+    height: 49px;
+    border: 0;
+    padding: 20px;
+    padding-left: 40px;
+}
+.input-img{
+    width: 20px;
+    margin-left: 10px;
+    position: relative;
+    left: 30px;
+}
+input:active, 
+input:focus
+{
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(253, 13, 73, 0.25);
+}
+.select{
+    padding: 10px;
+    padding-left: 40px;
+}
+.boton{
+    display: flex;
+    justify-content: center;
+    height: 41px;
+    margin: auto 0;
+    padding: 0 30px;
+}
+#viajar{
+    padding: 0px 20px;
+    background-color: rgb(221, 54, 82);
+    border-color: red;
+    color: white;
+    border: none;
+    width: 233px;
+}
+#viajar:hover{
+    background-color: rgb(216, 44, 73);
+    border-color: red;
+}
+
+/* Dark Mode */
+body.dark {
+    background: #111111;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+}
+body.dark h2{
+    color: white;
+}
+body.dark h3{
+    color: white;
+}
+body.dark h4{
+    color: white;
+}
+body.dark h5{
+    color: white;
+}
+body.dark h6{
+    color: white;
+}
+body.dark .display-4{
+    color: white;
+}
+body.dark .lead{
+    color: white;
+}
+body.dark .div__flex{
+    background-color: rgb(0 0 0 / 52%);
+}
+body.dark .colorOscuro{
+    background-color: #0c2852 !important;
+}
+body.dark #viajar{
+    background-color: #0c2852;
+}
+body.dark .btn-primary{
+    background-color: #0c2852;
+}
+body.dark button{
+    border-color: black !important;
+}
+body.dark .boton__destinos{
+    border-color: black;
+}
+body.dark .boton__destinos:hover{
+    background-color: white;
+    color: black !important;
+}
+body.dark .header{
+    background-image: url(../imagenes/fondo-dark.jpeg);
+    -webkit-transition: .2s ease all;
+    transition: .2s ease all;
+}
+body.dark .viajes__h5{
+    color: black;
+}
+body.dark .viajes__p{
+    color: black;
+}
+body.dark #div1{
+    background-color: black;
+}
+body.dark .card-header{
+    color: white;
+    background-color: #0c2852;
+}
+body.dark .card-title{
+    color: white;
+}
+body.dark .carrito_boton{
+    color: white;
+}
+body.dark footer{
+    background-color: #efefef !important;
+}
+body.dark footer p{
+    color: black !important;
+}
+body.dark footer div h3 a{
+    color: black !important;
+}
+body.dark .btn:hover{
+    background-color: white;
+    color: black;
+}
+body.dark .cuerpoCarta h5{
+    color: black;
+}
+body.dark .cuerpoCarta{
+    background-color: white !important;
+}
+body.dark .swal2-title{
+    color: black;
+}
+body.dark .img-github{
+    background-color: black;
+}
+
+/*COMPRAR.HTML DARK*/
+
+body.dark .card-title{
+    color: white;
+}
+body.dark .card-text{
+    color: black;
+}
+body.dark .card-body{
+    background-color: #0c2852;
+}
+body.dark .carta-destinos{
+    border-color: white;
+}
+body.dark .card-header{
+    background-color: white;
+    color: black;
+}
+body.dark .carta-destino-precio div div p{
+    color: white;
+}
+body.dark .carta-destino-precio span{
+    color: #efefef;
+}
+body.dark .viajes__span2{
+    color: #efefef;
+}
+body.dark label{
+    color: white;
+}
+body.dark .btn-room{
+    background-color: black;
+}
+body.dark small{
+    color: white !important;
+}
+body.dark #botonComprar{
+    margin-bottom: 0;
+    background-color: black;
+}
+body.dark #botonComprar:hover{
+    background-color: white;
+    color: black;
+}
+body.dark #botonComprar2{
+    margin-bottom: 0;
+    background-color: black;
+}
+body.dark #botonComprar2:hover{
+    background-color: white;
+    color: black;
+}
+body.dark .carta-destino-precio2 div div p{
+    color: white;
+}
+body.dark .paquetes-boton{
+    background-color: black;
+}
+body.dark .div-gracias p a{
+    color: white;
+}
+body.dark .div-gracias h1{
+    color: white;
+}
+body.dark .spinner>div {
+    background-color: white;
+}
+
+/* BOTON DARK MODE */
+
+.switch {
+    background: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    outline: none;
+}
+
+.switch::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #F1F1F1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active {
+    background: orange;
+    color: #000;
+}
+
+.switch.active::after {
+    right: 0;
+    left: unset;
+}
+
+.switch span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+
+/* BOTON DAR MODE RESPOPNSIVE */
+
+.switch2 {
+    background: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    outline: none;
+}
+
+.switch2::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #F1F1F1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch2.active {
+    background: orange;
+    color: #000;
+}
+
+.switch2.active::after {
+    right: 0;
+    left: unset;
+}
+
+.switch2 span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+.div-switch2{
+    width: 65vw;
+}
+#switch2{
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+/*Parte Principal*/
+
+.principal__h1{
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+.principal__p{
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    color: white;
+}
+
+/*CARTA OFERTAS*/
+
+.vuelos__div{
+    display: flex;
+    justify-content: center;
+}
+.vuelos__h2{
+    text-align: center;
+    margin: 30px 0;
+}
+.cartaViaje{
+    border-radius: 0 0 20px 20px;
+    -webkit-transition: box-shadow .2s ease-out;
+    transition: box-shadow .2s ease-out;
+}
+.cartaViaje:hover{
+    -webkit-transition: box-shadow .2s ease-out;
+    transition: box-shadow .2s ease-out;
+}
+.boton__destinos{
+    margin-bottom: 20px;
+    background-color: rgb(221, 54, 82);
+    border-color: red;
+}
+.boton__destinos:hover{
+    color: rgb(221, 54, 82);
+    background-color: white;
+    border-color: red;
+}
+
+/* CARTAS VIAJES */
+
+.boton__viajes{
+    height: fit-content;
+    margin-right: 30px;
+    background-color: rgb(221, 54, 82);
+    border-color: red;
+}
+.boton__viajes:hover{
+    background-color: rgb(216, 44, 73);
+    border-color: red;
+}
+.cartas-p{
+    margin-bottom: 0;
+}
+.paisaje__img{
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+}
+.viajes__h5{
+    margin-left: 38px;
+    margin-top: 20px;
+}
+.viajes__p{
+    margin-left: 38px;
+    margin-bottom: 0;
+}
+.viajes__p2{
+    font-size: 24px;
+    margin-left: 38px;
+}
+.viajes__span{
+    color: #626565;
+    font-size: 14px;
+    margin-left: 41px;
+}
+.lead{
+    margin-bottom: 100px;
+}
+
+/*Busqueda Rapida Seccion*/
+
+
+.busqueda__div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.jumbotron{
+    margin: auto 0;
+    text-align: center;
+}
+#div1{
+    display: none;
+}
+.select-paquete{
+    padding: 10px 0;
+    width: 190px;
+}
+
+
+/* FORM DE RESERVA */
+.email-help{
+    font-size: 14px;
+  }
+  .bg-header-thank{
+    background-image: url("../images/thank.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  }
+  .thank-title{
+    color:#c78b32;
+    font-size: 25px;
+    text-shadow: 2px 2px 1px rgb(255, 255, 255);
+  }
+  .btn-room{
+    padding: 5px 8px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(221, 54, 82);
+    border-color: red;
+  }
+  .btn-room:hover {
+    color: rgb(221, 54, 82);
+    background-color: white;
+    border-color: red;
+  }
+
+
+/* COMPRAR/PAQUETES.HTML */
+
+.comprar{
+    margin: auto 0;
+}
+.comprar__h1{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+.comprar__p{
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+.nice{
+    max-width: 10%;
+    max-height: auto;
+}
+.span-margin{
+    margin-left: 20px !important;
+}
+.carta-destinos{
+    height: 600px;
+    background-color: rgb(221, 54, 82);
+    border-radius: 10px;
+}
+.destinos-header{
+    border-bottom: 1px solid white;
+    color: white;
+}
+.destinos-div{
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.destinos-img{
+    width: 20px;
+    margin-left: 10px;
+}
+#claseP, #fechaP, #fecha2P, #personasP, #destinoP, #salidaP{
+    margin-left: 20px;
+    margin-top: 400px;
+}
+.carta-elegir-destino{
+    height: 280px;
+}
+.carta-destino-precio2{
+    height: 290px;
+}
+.viajes__p2::before{
+    content: '$';
+}
+.viajes__span2{
+    color: #626565;
+    font-size: 14px;
+}
+.card-title{
+    color: black;
+}
+#contact-form{
+    display: none;
+}
+.botonComprar{
+    width: fit-content;
+    position: relative;
+    bottom: 57px;
+    left: 223px;
+}
+.botonComprar:hover{
+    background-color: white;
+    color: rgb(221, 54, 82);
+}
+
+/* SPINNER DE GRACIAS POR LA COMPRA*/
+.spinner {
+    display: none;
+    margin: 30px auto 0;
+    width: 70px;
+    text-align: center;
+    margin-top: 300px;
+}
+
+.spinner>div {
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0)
+    }
+
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bouncedelay {
+
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    40% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+.div-gracias{
+    position: relative;
+    top: 150px;
+}
+
+/*Carrito Flotante*/
+
+.social{
+	/*las imágenes usadas tienen width de 48px*/
+	width:48px;
+	position: sticky;
+	top:50px;
+	right:0;
+}
+
+/* Extra centrado vertical*/
+
+.social{
+	/*border:1px solid #000;*/
+	height:62px;
+	/*para poner height 192 deberíamos haber indicado en el reset de estilos font-size:0;*/
+	margin-top:-185px;
+}
+
+/* CARRITO SLIDE */
+
+#carrito {
+    position: fixed;
+    transform: translateX(0);
+    z-index: 1;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    right: -350px;
+    top: 135px;
+    background-color: #828282;
+    color: white;
+    padding: 10px 15px 0px 15px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow-x: hidden;
+    padding-bottom: 150px;
+}
+
+#carrito.active {
+    right: 0px;
+    top: 135px;
+}
+
+body.dark #carrito {
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+
+.fa-shopping-cart {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.portada {
+    max-width: 50%;
+    max-height: auto;
+}
+
+/* -------------------------------- */
+
+/* MOSTRAR CARRITO */
+.carrito__img {
+    max-height: 100px;
+    max-width: 150px;
+    object-fit: cover;
+}
+.img-paquetes{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.paquetes-boton{
+    margin: 0 auto;
+}
+
+/* ALERTA GRACIAS POR SU COMPRA */
+
+.gracias-color a{
+    color: black;
+}
+.gracias-color a:hover{
+    color: rgb(216, 44, 73);
+}
+
+/* FOOTER */
+
+.footer-img{
+    width: 70px;
+    margin-bottom: 5px;
+    transition: all .5s;
+}
+.redes-sociales a{
+    margin: 0 auto;
+}
+.redes-sociales:hover .footer-img {
+    transform: translateY(-10px);
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 310px) {
+    #cabeza{
+        margin-top: 150px !important;
+    }
+    .select-paquete{
+        width: 100%;
+    }
+    .grupoLogoLateral{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 391px) {
+    .botonComprar-left{
+        left: 200px !important;
+    }
+}
+
+@media only screen and (max-width: 344px) {
+    .cartaViaje{
+        display: flex;
+        text-align: center;
+    }
+    .viajes__h5, .viajes__p, .viajes__p2, .viajes__span{
+        margin-left: 0;
+    }
+    .viajes__span{
+        margin: 0 auto;
+    }
+    .div__2{
+        margin-top: 20px;
+    }
+    .botonComprar{
+        width: fit-content;
+        bottom: 0 !important;
+        left: 0 !important;
+        margin: 0 auto;
+        margin-bottom: 20px !important;
+    }
+    .select-carta{
+        width: 100%;
+    }
+    .redes{
+        flex-direction: column;
+    }
+    .redes .redes-sociales{
+        text-align: center;
+    }
+    #cabeza{
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (max-width: 457px){
+    .social{
+        height: 98px;
+        margin-top: -115px;
+    }
+    .social-margen{
+        margin-top: -205px;
+    }
+    .busqueda-margen{
+        margin-top: -3rem !important;
+    }
+    #carrito.active{
+        top: 245px;
+    }
+    #carrito{
+        width: 200px;
+        height: 84%;
+    }
+    .carrito-productos{
+        flex-direction: column !important;
+    }
+    .carrito__img{
+        margin: 0 auto;
+    }
+    #footer{
+        flex-direction: column !important;
+        justify-content: space-between !important;
+    }
+    aside{
+        padding-right: var(--bs-gutter-x, 0.75rem);
+        padding-left: var(--bs-gutter-x, 0.75rem);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+      height: 125vh !important;
+    }
+    .form-row{
+        flex-direction: column;
+    }
+    .cuerpoCarta{
+        text-align: center;
+    }
+    #separacion{
+        display: none;
+    }
+    .boton-div{
+        margin-left: 12px;
+    }
+    #headerB{
+        padding-right: var(--bs-gutter-x, 0.75rem);
+        padding-left: var(--bs-gutter-x, 0.75rem);
+        margin-right: auto;
+        margin-left: auto;
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    header{
+        height: 80vh !important;
+    }
+    .navbar{
+        width: 100%;
+        max-width: 90%;
+    }
+    header button:nth-of-type(2){
+        display: none !important;
+    }
+    .navbar-toggler-icon{
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 9.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");    
+    }
+    .ham{
+        display: block;
+    }
+    .navegacion{
+        display: none !important;
+    }
+    #viajar{
+        height: 41px;
+    }
+    .div2{
+        width: 100%;
+    }
+    .carta-elegir-destino{
+        margin-top: 20px;
+    }
+    .carta-destinos{
+        width: 100%;
+    }
+    .carta-destino-precio{
+        width: 100%;
+    }
+    .div-gracias{
+        position: relative;
+        top: 250px;
+    }
+}

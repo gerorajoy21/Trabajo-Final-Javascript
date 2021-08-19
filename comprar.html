@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagenes/logo.svg">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Rajoy Tours | Comprar</title>
+</head>
+<body>
+    <header id="header-compras" class="header-compras header d-flex flex-column">
+        <nav class="navbar navbar-expand-lg bg-light rounded" aria-label="Twelfth navbar example">
+            <button class="ham" type="button" id="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="text-center">
+                <img class="logo" src="imagenes/logo.svg" alt="">
+                <h4 class="logo-h3">Rajoy Tours</h4>
+            </div>
+            <div class="container-fluid navegacion">
+                <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+                    <ul class="navbar-nav nav-pills">
+                            <li class="nav-item">
+                            <a class="nav-link active colorOscuro" aria-current="page" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" id="vuelos" href="#">Vuelos</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="#">Ofertas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Paquetes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="switch" id="switch">
+                <span><i class="fas fa-sun"></i></span>
+                <span><i class="fas fa-moon"></i></span>
+            </button>
+
+
+            <!-- MENU LATERAL -->
+        <div class="menuLateral container" id="menuLateral">
+            <div class="contenedorLateral">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="grupoLogoLateral">
+                        <img class="logo" src="imagenes/logo.svg" alt="">
+                        <h4 class="logo-h3 text-dark">Rajoy Tours</h4>
+                    </div>
+                    <button type="button" id="cerrar" class="cerrar">X</button>
+                </div>
+                <hr>
+                <a href="index.html" class="text-dark d-block mt-3">Inicio</a>
+                <a href="" class="text-dark d-block mt-3">Vuelos</a>
+                <a href="" class="text-dark d-block mt-3">Ofertas</a>
+                <a href="" class="text-dark d-block mt-3">Paquetes</a>
+                <a href="" class="text-dark d-block mt-3">Contacto</a>
+                <div class="icons d-flex flex-column">
+                    <div class="d-flex justify-content-around div-redes">
+                        <a href="instagram/gerorajoy21" target="_blank"><img src="imagenes/Instagram.png"
+                            alt="" class="img-fluid"></a>
+                    <a href="#" target="_blank"><img src="imagenes/Facebook.png"
+                            alt="" class="img-fluid"></a>
+                    <a href="#" target="_blank"><img src="imagenes/Linkedin.png"
+                            alt="" class="img-fluid"></a>
+                    <a href=""><img src="imagenes/Mail.png" alt="" class="img-fluid"></a>
+                    </div>
+                    <div class="div-switch2">
+                        <button class="switch" id="switch2">
+                            <span><i class="fas fa-sun"></i></span>
+                            <span><i class="fas fa-moon"></i></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+        <div class="overlay" id="overlay"></div>
+            <div id="headerB" class="d-flex justify-content-center flex-column comprar">
+                <h1 class="comprar__h1">Compra tu vuelo</h1>
+                <p class="comprar__p">Verifica el precio final y completa los datos de pago</p>
+            </div>
+    </header>
+    <main class="container mt-5">
+        <div  id="layout" class="row">
+            <aside class="col-md-12 col-lg-3 col-sm-12">
+                <div class='card text-left carta-destinos'>
+                    <div class='card-header destinos-header text-center'>
+                        Elegiste un vuelo de <span id="tipoDeViajeP"></span>
+                    </div>
+                    <div class='card-body d-flex flex-column justify-content-around'>
+                        <div class="destinos-div d-flex">
+                            <img class="destinos-img" src="imagenes/origen.svg" alt="origen">
+                            <h5 class='card-text'> <span class="viajes__span span-margin">Origen</span> <br> <span id="salidaP"></span></h5>
+                        </div>
+                        <div class="destinos-div d-flex">
+                            <img class="destinos-img" src="imagenes/destino.svg" alt="destino">
+                            <h5 class='card-text'> <span class="viajes__span span-margin">Destino</span> <br> <span id="destinoP"></span></h5>
+                        </div>
+                        <div class="destinos-div d-flex">
+                            <img class="destinos-img" src="imagenes/pasajeros.svg" alt="pasajeros">
+                            <h5 class='card-text'> <span class="viajes__span span-margin">Vas a comprar</span> <br> <span id="personasP"></span> pasajes</h5>
+                        </div>
+                        <div class="destinos-div d-flex">
+                            <img class="destinos-img" src="imagenes/clase.svg" alt="clase">
+                            <h5 class='card-text'><span class="viajes__span span-margin">Vas a viajar en clase</span> <br> <span id="claseP"></span></h5>
+                        </div>
+                        <div class="destinos-div d-flex">
+                            <img class="destinos-img" src="imagenes/salida.svg" alt="salida">
+                            <h5 class='card-text'> <span class="viajes__span span-margin">Fecha de Salida:</span> <br> <span id="fechaP"></span></h5>
+                        </div>
+                        <div class="destinos-div d-flex">
+                            <img class="destinos-img" src="imagenes/llegada.svg" alt="llegada">
+                            <h5 class='card-text'><span class="viajes__span span-margin">Fecha de Llegada:</span> <br> <span id="fecha2P"></span></h5>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <section class="col-md-9 col-sm-12 d-flex flex-column justify-content-around container">
+                <div class="d-flex row">
+                    <div class="card text-center d-flex carta-elegir-destino col-lg-8">
+                        <div class="card-header">
+                            Aerolineas Argentinas
+                        </div>
+                        <div class="card-body d-flex justify-content-around">
+                            <div>
+                                <h5 class="card-title">Ida <br> <span class="viajes__span2" id="fecha2P2"></span></h5>
+                                <h5 class="card-title">Horario <br> <span class="viajes__span2">5:40</span></h5>
+                                <h5 class="card-title">2 Escalas <br></h5>
+                            </div>
+                            <div>
+                                <h5 class="card-title">Vuelta <br> <span class="viajes__span2" id="fechaP2"></span></h5>
+                                <h5 class="card-title">Horario <br> <span class="viajes__span2">12:20</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card text-right carta-destino-precio text-end col-lg-4">
+                        <div class="card-body pb-0 pt-3">
+                            <span  class="viajes__span2">Precio por persona <br> <h5 class="card-title">$ <span id="costoVueloP"></span></h5></span>
+                            <div class="d-flex justify-content-between">
+                                <p class="card-text">Impuesto Pais</p>
+                                <h5 id="impuestoPaisP"></h5>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p class="card-text">Tasas y Cargos</p>
+                                <h5 id="tasasCargosP"></h5>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <p class="card-text"><b>Precio Final</b></p>
+                                <h5 id="precioFinalP"></h5>
+                            </div>
+                            <button class="boton__destinos btn btn-primary mb-0" id="botonComprar" href="">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex row">
+                    <div class="card text-center d-flex carta-elegir-destino col-lg-8">
+                        <div class="card-header">
+                            American Airlines
+                        </div>
+                        <div class="card-body d-flex justify-content-around">
+                            <div>
+                                <h5 class="card-title">Ida <br> <span class="viajes__span2" id="fecha2P3"></span></h5>
+                                <h5 class="card-title">Horario <br> <span class="viajes__span2">12:40</span></h5>
+                                <h5 class="card-title">Sin Escalas <br></h5>
+                            </div>
+                            <div>
+                                <h5 class="card-title">Vuelta <br> <span class="viajes__span2" id="fechaP3"></span></h5>
+                                <h5 class="card-title">Horario <br> <span class="viajes__span2">18:20</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card text-right carta-destino-precio text-end col-lg-4">
+                        <div class="card-body pb-0 pt-3">
+                            <span  class="viajes__span2">Precio por persona <br> <h5 class="card-title">$ <span id="costoVueloP2"></span></h5></span>
+                            <div class="d-flex justify-content-between">
+                                <p class="card-text">Impuesto Pais</p>
+                                <h5 id="impuestoPaisP2"></h5>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p class="card-text">Tasas y Cargos</p>
+                                <h5 id="tasasCargosP2"></h5>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <p class="card-text"><b>Precio Final</b></p>
+                                <h5 id="precioFinalP2"></h5>
+                            </div>
+                            <button class="boton__destinos btn btn-primary botonCompra mb-0" id="botonComprar2" href="">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section id="section-comprar" class="pt-5">
+            <div class="pt-5">
+                <!-- Contact Form Begin -->
+                <div id="contact-form" class="container mb-5">
+                    <h3 id="titulo-reserva"></h3>
+                    <form action="thank.html" method="post" enctype="multipart/form-data" id="formComprar">
+                        <!-- Contact Information -->
+                        <div class="col my-3">
+                            <div class="card">
+                                <div class="card-body container">
+                                    <div class="d-flex justify-content-center align-content-center row">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="container">
+                                                <h5 class="mb-4 container mt-3">Informacion de Contacto</h5>
+                                                <div class="form-row mb-2 d-flex">
+                                                <div class="col container">
+                                                    <label for="name">Nombre*</label>
+                                                    <input type="text" class="form-control form-control-sm" id="name" placeholder="" required>
+                                                </div>
+                                                <div class="col container">
+                                                    <label for="last-name">Apellido*</label>
+                                                    <input type="text" class="form-control form-control-sm" id="last-name" placeholder="" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-row mb-2 d-flex">
+                                                <div class="col container">
+                                                    <label for="phone">Telefono*</label>
+                                                    <input type="tel" class="form-control form-control-sm" id="phone" placeholder="" required>
+                                                </div>
+                                                <div class="col container">
+                                                    <label for="email">Email</label>
+                                                    <input type="email" class="form-control form-control-sm" id="email" placeholder="" required> 
+                                                    <small id="emailHelp" class="email-help form-text text-muted">A este email vamosa mandar toda la informacion.</small>
+                                                </div>
+                                            </div>
+                                            <div class="form-row mb-2 d-flex">
+                                                <div class="col container">
+                                                    <label for="country">Pais</label>
+                                                    <input type="text" id="country" class="form-control form-control-sm"></input>   
+                                                </div>
+                                                <div class="col container">
+                                                    <label for="city">Ciudad</label>
+                                                    <input type="text" class="form-control form-control-sm" id="city">
+                                                </div>
+                                            </div>
+                                            <div class="form-row mb-2 d-flex">
+                                                <div class="col container">
+                                                    <label for="address">Direccion</label>
+                                                    <input type="text" class="form-control form-control-sm" id="address">
+                                                </div>
+                                                <div class="col container">
+                                                    <label for="postal-code">Codigo postal</label>
+                                                    <input type="number" class="form-control form-control-sm" id="postal-code">
+                                                </div>
+                                            </div>
+                                            <div class="form-row mb-2 mt-3">
+                                                <div class="col">
+                                                    <label for="message">Detalles y preferencias adicionales</label>
+                                                    <textarea class="form-control" id="message" rows="4"></textarea>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">  
+                                            <div class="container">
+                                                <h5 class="mb-4 container mt-3">Informacion de pago</h5>
+                                                <div class="form-row mb-2 container">
+                                                    <div class="col">
+                                                        <ul class="nav bg-dark nav-pills rounded nav-fill mb-3" role="tablist">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" data-toggle="pill" href="#nav-tab-card">
+                                                                <i class="fa fa-credit-card"></i> Tarjeta de Credito</a></li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" data-toggle="pill" href="#nav-tab-paypal">
+                                                                <i class="fab fa-paypal"></i>Paypal</a></li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" data-toggle="pill" href="#nav-tab-bank">
+                                                                <i class="fa fa-university icon"></i>Transferencia Bancaria</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row mb-2 container">
+                                                    <div class="col">
+                                                        <label for="username">Nombre Completo en la tarjeta</label>
+                                                        <input type="text" class="form-control form-control-sm" name="username" required> 
+                                                    </div>
+                                                </div>
+                                                <div class="form-row mb-2 container">
+                                                    <label for="cardNumber">Numero de Tarjeta</label>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm" name="cardNumber" required>
+                                                    </div>
+                                                </div> 
+                            
+                                                <div class="form-group mb-2 container">
+                                                    <label><span class="hidden-xs">Expiracion</span> </label>
+                                                    <div class="input-group">
+                                                        <input type="number" class="form-control form-control-sm" placeholder="MM" name="" required>
+                                                        <input type="number" class="form-control form-control-sm" placeholder="YY" name="" required>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="form-group mb-2 container">
+                                                    <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
+                                                    <input type="number" class="form-control form-control-sm" required="">
+                                                </div>
+                                                </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="form-row my-3 d-flex justify-content-end align-items-center justify-content-center">
+                                        <div class="col-6 d-flex flex-column">
+                                            <button class="btn btn-room btn-block mb-2" type="reset" value="Delete data">Limpiar Formulario</button>
+                                            <button class="btn btn-room btn-block" type="submit"> Confirmar Compra</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </main>
+    <footer class="d-flex flex-column bg-dark">
+        <div class="d-flex justify-content-around flex-wrap redes pt-5">
+            <div class="d-flex flex-column redes-sociales">
+                <a href="https://www.linkedin.com/in/geronimo-rajoy-gomez-5b61ba200/"><img class="img-fluid footer-img" src="imagenes/linkedin.svg" alt=""></a>
+                <h3 class="footer-a text-center"><a class="text-white" href="https://www.linkedin.com/in/geronimo-rajoy-gomez-5b61ba200/">LinkedIn</a></h3>
+            </div>
+            <div class="d-flex flex-column redes-sociales">
+                <a href="https://github.com/gerorajoy21"><img class="img-fluid footer-img img-github" src="imagenes/github.svg" alt=""></a>
+                <h3 class="footer-a text-center"><a class="text-white" href="https://github.com/gerorajoy21">Git Hub</a></h3>
+            </div>
+            <div class="d-flex flex-column redes-sociales">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=gerorajoy21@gmail.com"><img class="img-fluid footer-img"   src="imagenes/gmail.svg" alt=""></a>
+                <h3 class="footer-a text-center"><a class="text-white" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=gerorajoy21@gmail.com">Gmail</a></h3>
+            </div>
+        </div>
+        <p class="text-center text-white pt-4 pb-4">Creado por Geronimo Rajoy Gomez</p>
+    </footer>
+    <!-- BOOTSTRAP  -->
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/fddf5c0916.js" crossorigin="anonymous"></script>
+    <!-- SWEET ALERT -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Mi scripts -->
+    <script src="js/comprar.js"></script>
+</body>
+</html>
