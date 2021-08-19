@@ -122,24 +122,25 @@ function obtenerDatos(){
     localStorage.setItem(fecha2Data.id, fecha2Data.value);
 }
 
+//VALIDANDO FORMULARIO
+
 function destinoDatos(){
+    
     const arrayDestinos = viajes.map(function(array) {
         return array.destino;
     });
-
     let destinoData = document.getElementById("destino");
     let salidaData = document.getElementById("salida");
     obtenerDatos()
 
     if($('#tipoDeViaje').val(), $('#salida').val(), $('#destino').val(), $('#personas').val(), $('#clase').val(), $('#fecha').val(), $('#fecha2').val() === null || $('#tipoDeViaje').val(), $('#salida').val(), $('#destino').val(), $('#personas').val(), $('#clase').val(), $('#fecha').val(), $('#fecha2').val() === '' || arrayDestinos.includes(localStorage.getItem(destinoData.id, destinoData.value)) == false || arrayDestinos.includes(localStorage.getItem(salidaData.id, salidaData.value)) == false ){
-        alert("Por favor, completar correctamente el formulario (Poner en mayuscula la primera letra del pais de salida y/o de llegada y no dejar un espacio al final de cada texto)")
+        alert("Por favor, completar correctamente el formulario")
     } else{
         window.location.href = "comprar.html";
     }
 }
 
 botonViajar.click(destinoDatos);
-
 
 //BUSQUEDA PERSONALIZADA DE VIAJES (AJAX Y JSON)
 
@@ -149,6 +150,27 @@ $.get(URLJSON, function(data, status){
     if(status === 'success'){
         viajes = data;
     }
+
+    //VALIDANDO FORM
+    const arrayDestinos = viajes.map(function(array) {
+        return array.destino;
+    });
+
+    let listSalida = document.getElementById('listaSalida');
+    
+    arrayDestinos.forEach(function(item){
+    let option = document.createElement('option');
+    option.value = item;
+    listSalida.appendChild(option);
+    });
+
+    let listDestino = document.getElementById('listaDestino');
+    
+    arrayDestinos.forEach(function(item){
+    let option = document.createElement('option');
+    option.value = item;
+    listDestino.appendChild(option);
+    });
 })
 
 function crearTarjetasHTML(filtradas){
